@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b1cbe623cf2464e84ee1797b1600e0, type: 3}
+  m_Name: GameLoopRecipe
+  m_EditorClassIdentifier: 
+  _view: {fileID: 6972446162989685066, guid: 4234628a22c29d642b02af515f7a38d1, type: 3}
+  _data:
+    _goButtonText: Go!
+    _reviveButtonText: Revive!
+    _soldOutText: Sold Out
+    _notAvailableText: Not Available
+    _healItem:
+      _itemName: Health
+      _itemPrice: 100
+      _healAmount: 10
+      _itemImage: {fileID: 21300000, guid: 6f7da9cee258f0749918c58c5c16277b, type: 3}
+    _weaponItems:
+    - _itemName: Long Sword
+      _itemPrice: 200
+      _itemImage: {fileID: 21300000, guid: e98ce5a693779ee4b8c2494af5568554, type: 3}
+      _weaponRecipe: {fileID: 11400000, guid: 85b26bdf73e5a3047aa684c5ac5511f7, type: 2}
+    - _itemName: Great Sword
+      _itemPrice: 500
+      _itemImage: {fileID: 21300000, guid: 87d9b96164be45a4da96f9da1f96170d, type: 3}
+      _weaponRecipe: {fileID: 11400000, guid: 34a11c118d113fd4a91cf34aaff5c1a8, type: 2}

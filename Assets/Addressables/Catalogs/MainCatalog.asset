@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d541845124f6ec4587376bce64aee1e, type: 3}
+  m_Name: MainCatalog
+  m_EditorClassIdentifier: 
+  entries:
+  - id: ui_atlas
+    reference:
+      m_AssetGUID: fe189c0006577944eaa12ec9bdff3f0f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    loadOnStartup: 1
+  - id: hero_main
+    reference:
+      m_AssetGUID: 89de4008f8cc87d4a8e2924ba9d12eb7
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    loadOnStartup: 1
+  - id: extraction_point
+    reference:
+      m_AssetGUID: 2dc5ad1b20fe6c84d8520189a0452094
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    loadOnStartup: 1
+  - id: weapon_longsword
+    reference:
+      m_AssetGUID: bac79aa2a0057e5429a664d3f336da3d
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    loadOnStartup: 1
+  - id: weapon_greatsword
+    reference:
+      m_AssetGUID: 17cf6e9fc28f3a544bc062d510f66f4a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    loadOnStartup: 1
+  - id: weapon_curvedsword
+    reference:
+      m_AssetGUID: 4d0814cafad460246890ec829fa7071d
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    loadOnStartup: 1
+  - id: enemy_bee
+    reference:
+      m_AssetGUID: e9055674d30aca44d9cfde64ce6b2e4b
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    loadOnStartup: 1
+  - id: enemy_bee_1
+    reference:
+      m_AssetGUID: 87acf546a3e31b241b0292b20eb4fa05
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    loadOnStartup: 1
+  - id: enemy_bee_2
+    reference:
+      m_AssetGUID: f7ce23cdaf691354d9fd2f365643d7c9
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    loadOnStartup: 1
+  - id: enemy_bee_3
+    reference:
+      m_AssetGUID: 3f2272128fbd36847aea714ae0e4dd29
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+    loadOnStartup: 1

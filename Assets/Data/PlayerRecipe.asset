@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7934ec7663c8f0641812f453af0a7545, type: 3}
+  m_Name: PlayerRecipe
+  m_EditorClassIdentifier: 
+  _view: {fileID: 2230269686501832896, guid: 89de4008f8cc87d4a8e2924ba9d12eb7, type: 3}
+  _data:
+    _rotationSmoothTime: 0.06
+    _minAngleForRotation: 2
+    _initialWeaponRecipe: {fileID: 11400000, guid: 02276d39cbe7e0f48be82e2fcb958547, type: 2}

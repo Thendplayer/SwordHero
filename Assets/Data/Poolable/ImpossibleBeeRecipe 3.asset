@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04289ec66dbbc1b48b9695adf8b4c7c6, type: 3}
+  m_Name: ImpossibleBeeRecipe 3
+  m_EditorClassIdentifier: 
+  _view: {fileID: 7896985204932461770, guid: 3f2272128fbd36847aea714ae0e4dd29, type: 3}
+  _data:
+    _rotationSmoothTime: 0.06
+    _minAngleForRotation: 5
+    _baseHealthPoints: 21
+    _goldValue: 300
+    _initialWeaponRecipe: {fileID: 11400000, guid: 976c164bff42d4a42937fcb12fb8194a, type: 2}

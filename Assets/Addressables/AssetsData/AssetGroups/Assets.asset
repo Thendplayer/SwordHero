@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 151ca61d88a18f846bb78810cfaee343
+  m_SerializeEntries:
+  - m_GUID: bac79aa2a0057e5429a664d3f336da3d
+    m_Address: weapon_longsword
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17cf6e9fc28f3a544bc062d510f66f4a
+    m_Address: weapon_greatsword
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d0814cafad460246890ec829fa7071d
+    m_Address: weapon_curvedsword
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89de4008f8cc87d4a8e2924ba9d12eb7
+    m_Address: hero_main
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2dc5ad1b20fe6c84d8520189a0452094
+    m_Address: extraction_point
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9055674d30aca44d9cfde64ce6b2e4b
+    m_Address: enemy_bee
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f2272128fbd36847aea714ae0e4dd29
+    m_Address: enemy_bee_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7ce23cdaf691354d9fd2f365643d7c9
+    m_Address: enemy_bee_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87acf546a3e31b241b0292b20eb4fa05
+    m_Address: enemy_bee_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe189c0006577944eaa12ec9bdff3f0f
+    m_Address: ui_atlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4234628a22c29d642b02af515f7a38d1
+    m_Address: game_loop_canvas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2c2a01d9444a5c343a774372540cda35, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4fd20a9c10db0c540bbd35158485c7bd, type: 2}
+    - {fileID: 11400000, guid: da6c30864b2ad9045a34dc61e70adce6, type: 2}
