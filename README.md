@@ -90,7 +90,7 @@ Mobile game prototype founded on clean architecture and advanced patterns such a
 
 I started by designing a solid, scalable architecture that would showcase both technical skills and mobile game development best practices. I chose MVC combined with dependency injection because of their strong synergy and my comfort with these patterns. The goal was to demonstrate not just what I could build, but how I approach architectural decisions for production mobile games.
 
-**Addressables System (~1.5h)**
+**Addressables System (~2h)**
 
 Asset management was my first priority, knowing it's critical for scalable mobile games. I noticed from playing Pocket Champs that Madbox likely uses Addressables extensively, so I built a comprehensive loading system with progress tracking. This foundation proved essential for everything that followed.
 
@@ -114,7 +114,7 @@ I implemented basic state management rather than a full state machine, given tim
 
 ## Technical Challenges
 
-### The VContainer + Object Pooling Dilemma
+### VContainer + Object Pooling
 
 This was where I hit my major architectural wall. I had committed to both dependency injection for clean architecture and object pooling for performance, but they fundamentally don't play well together. VContainer wants to control object lifecycles automatically (create once, dispose once), while Pooling demands the opposite (create once, spawn/despawn multiple times with manual control).
 
@@ -136,14 +136,14 @@ What took longer than expected was getting the threading right. Asset loading ca
 
 Looking at what I've built, there are several areas where I'd expand the game if I continued development:
 
-**Ranged Combat**: Right now everything is melee-based. 
+- **Ranged Combat**: Right now everything is melee-based. 
 
-**State Machine and Menus**: The current game loop is basic. A proper state machine would handle main menus, actual pause, and game state transitions more elegantly.
+- **State Machine and Menus**: The current game loop is basic. A proper state machine would handle main menus, actual pause, and game state transitions more elegantly.
 
-**Visual Effects and Feedback**: The game feels functional but lacks impact. Adding particle effects, screen shake, and visual feedback would make it more satisfying.
+- **Visual Effects and Feedback**: The game feels functional but lacks impact. Adding particle effects, screen shake, and visual feedback would make it more satisfying.
 
-**Enhanced UI**: The current UI is minimal. A proper inventory system, character stats display, and more polished interface would improve the player experience.
+- **Enhanced UI**: The current UI is minimal. A proper inventory system, character stats display, and more polished interface would improve the player experience.
 
-**Sound Integration**: I didn't implement any audio system. Adding sound effects, background music, and audio feedback would dramatically improve game feel.
+- **Sound Integration**: I didn't implement any audio system. Adding sound effects, background music, and audio feedback would dramatically improve game feel.
 
-**VContainer Architecture Review**: As I mentioned in the challenges section, I'd reconsider using VContainer for gameplay objects. The pooling conflicts taught me that sometimes simpler is better for performance-critical systems.
+- **VContainer Architecture Review**: As I mentioned in the challenges section, I'd reconsider using VContainer for gameplay objects. The pooling conflicts taught me that sometimes simpler is better for performance-critical systems.
