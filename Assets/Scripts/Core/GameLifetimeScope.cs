@@ -1,9 +1,9 @@
+using System;
 using Cinemachine;
 using MessagePipe;
 using SwordHero.AssetManagement;
 using SwordHero.Core.Events;
 using SwordHero.Core.Pawn.Enemy;
-using SwordHero.Core.Spawner;
 using SwordHero.Repositories;
 using UnityEngine;
 using VContainer;
@@ -69,28 +69,29 @@ namespace SwordHero.Core
                 recipe.Register(builder);
             }
 
-            builder.Register<RepositoryFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<RepositoryCoordinator>(Lifetime.Singleton).AsImplementedInterfaces();
-            
-            builder.Register<SpawnerService<EnemyPawnRepository>>(Lifetime.Singleton).AsSelf();
-            
+            builder.Register<RepositoryRegistry>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+
             builder.RegisterBuildCallback(RegisterPoolableRecipes);
         }
 
         private void RegisterPoolableRecipes(IObjectResolver resolver)
         {
-            RegisterRecipesForType<EnemyPawnRepository>(resolver);
-        }
-
-        private void RegisterRecipesForType<T>(IObjectResolver resolver) where T : IPoolableRepository
-        {
-            var spawnerService = resolver.Resolve<SpawnerService<T>>();
+            var registry = resolver.Resolve<RepositoryRegistry>();
 
             foreach (var recipe in _poolableRecipes)
             {
-                var repository = recipe.GetRepository();
-                if (repository is T) 
-                    spawnerService.RegisterSpawner(() => (T)recipe.GetRepository());
+                RegisterRepositoryType(registry, recipe);
+            }
+        }
+
+        private void RegisterRepositoryType(RepositoryRegistry registry, PoolableRecipe recipe)
+        {
+            var repository = recipe.GetRepository();
+            switch (repository)
+            {
+                case EnemyPawnRepository:
+                    registry.Register(() => (EnemyPawnRepository)repository);
+                    break;
             }
         }
     }

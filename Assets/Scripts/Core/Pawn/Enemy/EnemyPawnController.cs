@@ -9,7 +9,7 @@ namespace SwordHero.Core.Pawn.Enemy
     {
         private readonly SetRandomSpawnPositionUseCase _setRandomSpawnPositionUseCase;
         private readonly SetTargetDirectionUseCase _setTargetDirectionUseCase;
-        private readonly DespawnPoolablePawnInScopedLifetimeUseCase _despawnPoolablePawnInScopedLifetimeUseCase;
+        private readonly DespawnPoolablePawnUseCase _despawnPoolablePawnUseCase;
         private readonly IPublisher<GoldEarnedEvent> _goldEarnedPublisher;
 
         public EnemyPawnController(
@@ -19,13 +19,13 @@ namespace SwordHero.Core.Pawn.Enemy
             AttackClosestTargetUseCase attackClosestTargetUseCase,
             SetRandomSpawnPositionUseCase setRandomSpawnPositionUseCase,
             SetTargetDirectionUseCase setTargetDirectionUseCase,
-            DespawnPoolablePawnInScopedLifetimeUseCase despawnPoolablePawnInScopedLifetimeUseCase,
+            DespawnPoolablePawnUseCase despawnPoolablePawnUseCase,
             IPublisher<GoldEarnedEvent> goldEarnedPublisher
         ) : base(view, model, onPawnAttacked, attackClosestTargetUseCase)
         {
             _setRandomSpawnPositionUseCase = setRandomSpawnPositionUseCase;
             _setTargetDirectionUseCase = setTargetDirectionUseCase;
-            _despawnPoolablePawnInScopedLifetimeUseCase = despawnPoolablePawnInScopedLifetimeUseCase;
+            _despawnPoolablePawnUseCase = despawnPoolablePawnUseCase;
             _goldEarnedPublisher = goldEarnedPublisher;
         }
 
@@ -46,7 +46,7 @@ namespace SwordHero.Core.Pawn.Enemy
         protected override void HandleDeath()
         {
             _goldEarnedPublisher.Publish(new GoldEarnedEvent(_model.GoldValue));
-            _despawnPoolablePawnInScopedLifetimeUseCase.Execute();
+            _despawnPoolablePawnUseCase.Execute();
         }
 
         private void CalculateMovement()

@@ -7,20 +7,20 @@ namespace SwordHero.Core.Spawner
     public class EnemySpawnerController : IFixedTickable
     {
         private readonly EnemySpawnerModel _model;
-        private readonly SpawnerService<EnemyPawnRepository> _spawnerService;
+        private readonly RepositoryRegistry _registry;
 
-        public EnemySpawnerController(EnemySpawnerModel model, SpawnerService<EnemyPawnRepository> spawnerService)
+        public EnemySpawnerController(EnemySpawnerModel model, RepositoryRegistry registry)
         {
             _model = model;
-            _spawnerService = spawnerService;
+            _registry = registry;
         }
 
         public void FixedTick()
         {
-            var currentActiveEnemies = _spawnerService.GetTotalActive();
+            var currentActiveEnemies = _registry.GetActiveCount<EnemyPawnRepository>();
 
             if (!_model.CanSpawn(currentActiveEnemies)) return;
-            var enemy = _spawnerService.Spawn();
+            var enemy = _registry.SpawnRandom<EnemyPawnRepository>();
             if (enemy != null)
             {
                 _model.OnSpawned();
@@ -35,9 +35,7 @@ namespace SwordHero.Core.Spawner
         public void StopSpawning()
         {
             _model.SetSpawningEnabled(false);
-            _spawnerService.DespawnAll();
+            _registry.DespawnAll<EnemyPawnRepository>();
         }
-
-        public int GetActiveEnemyCount() => _spawnerService.GetTotalActive();
     }
 }

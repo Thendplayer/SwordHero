@@ -45,6 +45,8 @@ namespace SwordHero.Core.Pawn.Enemy
 
         public void Register(IContainerBuilder builder)
         {
+            builder.RegisterInstance(this).As<IPoolableRepository>();
+
             builder.RegisterInstance(_data);
             builder.RegisterComponentInNewPrefab(_view, Lifetime.Scoped);
             builder.Register<IPhysicsBody>(resolver =>
@@ -55,16 +57,13 @@ namespace SwordHero.Core.Pawn.Enemy
 
             builder.Register<PawnModel>(Lifetime.Scoped);
             builder.Register<EnemyPawnController>(Lifetime.Scoped).AsSelf();
-
+            
             builder.Register<AttackClosestTargetUseCase>(Lifetime.Scoped);
+            builder.Register<SetRandomSpawnPositionUseCase>(Lifetime.Scoped);
             builder.Register<SetTargetDirectionUseCase>(Lifetime.Scoped);
-            builder.Register<DespawnPoolablePawnInScopedLifetimeUseCase>(Lifetime.Scoped);
+            builder.Register<DespawnPoolablePawnUseCase>(Lifetime.Scoped);
 
-            builder.RegisterBuildCallback(resolver =>
-            {
-                _resolver = resolver;
-                Spawn();
-            });
+            builder.RegisterBuildCallback(resolver => _resolver = resolver);
         }
 
         public void Spawn()

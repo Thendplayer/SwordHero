@@ -2,13 +2,17 @@ using System.Collections.Generic;
 
 namespace SwordHero.Repositories
 {
-    public interface IFactoryPoolBase
+    public interface IPoolUpdatable
     {
         void Update();
+    }
+
+    public interface IPoolDespawnable
+    {
         bool TryDespawn(IPoolableRepository repository);
     }
 
-    public interface IFactoryPool<T> : IFactoryPoolBase where T : IRepository, IPoolableRepository
+    public interface IPoolSpawnable<T> : IPoolUpdatable, IPoolDespawnable where T : IPoolableRepository
     {
         T Spawn();
         void Despawn(T repository);
