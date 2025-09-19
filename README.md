@@ -1,6 +1,6 @@
 <div align="center">
 
-# Sword Hero | Madbox Senior Game Developer Assignment
+# Sword Hero 🗡️
 
 ![Madbox](https://img.shields.io/badge/Madbox-Senior%20Game%20Developer%20Assignment-FF6B6B?style=for-the-badge)
 ![Unity](https://img.shields.io/badge/Unity-2022.3.17f1-000000?style=for-the-badge&logo=unity)
